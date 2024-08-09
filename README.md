@@ -1,10 +1,10 @@
 # Algorithmic-Automated-Trading-Bot-on-Raspberry-Pi
 Developed and deployed an algorithmic trading bot that runs 24/7 on a Raspberry Pi. The bot implements a simple moving average crossover strategy to trade stocks and cryptocurrencies. The project involved data fetching, strategy implementation, backtesting, and automation.
-
+------------------------------------------------------------------------------------------
 ### Key Features:
 
 Automated Trading: The bot can execute trades based on predefined strategies without manual intervention. Backtesting: Historical data is used to test and optimize the trading strategy. Real-time Data: Integration with APIs to fetch real-time market data. 24/7 Operation: Hosted on a Raspberry Pi to ensure continuous operation.
-
+------------------------------------------------------------------------------------------
 ### Tools and Technologies Used:
 
 Programming Language: Python.
@@ -22,7 +22,7 @@ Hardware: Raspberry Pi 4, Mini sd card 16gb + (suggested), USB 2.0 card reader.
 Software: Raspbian OS, SSH, cron jobs. 
 
 APIs: Yahoo Finance (yfinance) for stock data, CCXT for cryptocurrency data, Alpaca API for stock trading
-
+------------------------------------------------------------------------------------------
 ### Detailed Explanation:
 
 1. Setup and Configuration: Installed Raspbian OS on a Raspberry Pi and set up the necessary environment. Enabled SSH for remote access and installed required Python libraries.
