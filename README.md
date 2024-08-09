@@ -11,7 +11,7 @@ Programming Language: Python
 Python Libraries: Pandas, NumPy, Matplotlib, yfinance, ta, ccxt, alpaca-trade-api 
 Hardware: Raspberry Pi 4, Mini sd card 16gb + (suggested), USB 2.0 card reader.
 
-[alt Raspberry Pi 4](https://assets.raspberrypi.com/static/raspberry-pi-4-labelled-f5e5dcdf6a34223235f83261fa42d1e8.png)
+[alt Picture of Raspberry Pi 4](https://assets.raspberrypi.com/static/raspberry-pi-4-labelled-f5e5dcdf6a34223235f83261fa42d1e8.png)
 
 Software: Raspbian OS, SSH, cron jobs 
 APIs: Yahoo Finance (yfinance) for stock data, CCXT for cryptocurrency data, Alpaca API for stock trading
