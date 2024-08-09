@@ -39,3 +39,11 @@ APIs: Yahoo Finance (yfinance) for stock data, CCXT for cryptocurrency data or `
 5. Created a shell script to start the bot and configured it to run at system boot using cron jobs. Ensured 24/7 operation by hosting the bot on the Raspberry Pi. Logging and Monitoring:
 
 6. Implemented logging to record all trading actions and decisions. Set up log monitoring to track the bot’s performance and actions in real-time.
+
+------------------------------------------------------------------------------------------
+
+# Step by Step Guide (follow this) 
+
+## Step 1
+1. Setting Up Your Development Environment- Ensure [Python](https://www.python.org/downloads/) is installed on your system (You can download python from their website, I recommend version 11). 
+2. Use an Integrated Development Environment (IDE where we will write and execute code) For eg. PyCharm, VSCode, or Jupyter Notebook. (If you are a beginner i suggest go with pycharm, intermediate users can install vscode).
