@@ -1,5 +1,9 @@
-# Algorithmic-Automated-Trading-Bot-on-Raspberry-Pi
-Developed and deployed an algorithmic trading bot that runs 24/7 on a Raspberry Pi. The bot implements a simple moving average crossover strategy to trade stocks and cryptocurrencies. The project involved data fetching, strategy implementation, backtesting, and automation.
+# Algorithmic-Automated-Trading-Bot-on-Raspberry-Pi (This is not for beginners)
+Developed and deployed an algorithmic trading bot that runs 24/7 on a Raspberry Pi. The bot implements a simple moving average crossover strategy to trade stocks and cryptocurrencies. The project involved data fetching, strategy implementation, backtesting, and automation. Once you are able to understand this you can expand on this by adding more advanced strategies, risk management techniques, and real-time data analysis.
+
+## Note
+I highly recommend that you test your bot on paper trading.
+## Note
 
 ------------------------------------------------------------------------------------------
 ### Key Features:
@@ -41,19 +45,168 @@ APIs: Yahoo Finance (yfinance) for stock data, CCXT for cryptocurrency data or `
 6. Implemented logging to record all trading actions and decisions. Set up log monitoring to track the bot’s performance and actions in real-time.
 
 ------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
-# Step by Step Guide (follow this) Coding Part
+## Step 1 (Get the Hardware Ready)
 
-Step 1. Setting Up Your Development Environment- Ensure [Python](https://www.python.org/downloads/) is installed on your system (You can download python from their website, I recommend version 11). 
-Step 2. Use an Integrated Development Environment (IDE where we will write and execute code) For eg. PyCharm, VSCode, or Jupyter Notebook. (If you are a beginner i suggest go with pycharm, intermediate users can install vscode).
+Step 1.1 Setting up Raspberry Pi (Get the Hardware Ready)
+- Raspberry Pi (preferably model 4)
+- MicroSD card (at least 16GB)
+- Power supply
+- Monitor, keyboard, and mouse (for initial setup)
+- Ethernet cable (Preffered) or Wi-Fi connection
 
-Step 3. Installing Required Libraries (Either use cmd (in windows), terminal (in macos) or terminal window in your IDE.
+Step 1.2. Install Raspbian OS
+- Download the Raspbian OS image from the [official Raspberry Pi website](https://www.raspberrypi.com/software/operating-systems/)
+- Use a tool like [Etcher](https://etcher.download/) to write the image to your microSD card.
+- Insert the microSD card into the Raspberry Pi and connect the power supply, monitor, keyboard, and mouse.
+- Follow the on-screen instructions to complete the setup.
+
+Step 1.3. Update Your System - Open a terminal on your Raspberry Pi (you can find it in the main menu) and run this command
 ```
-pip install pandas numpy matplotlib yfinance ta
-pip install ccxt  # this library is used for crypto currency trading
-pip install alpaca-trade-api  # stock trading with Alpaca API
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+Step 1.4. Enable SSH for Remote Access (run the following command in the terminal)
+```
+sudo raspi-config
+```
+
+Step 1.5. Find Your Raspberry Pi’s IP Address (in terminal paste this code and press enter, once you get the ip adress note it somehwere)
+```
+ifconfig
+```
+------------------------------------------------------------------------------------------
+
+## Step 2 (Setting Up Your Development Environment)
+
+Step 2.1 SSH into Your Raspberry Pi from Your Main Computer
+- Open a terminal (Mac/Linux) or cmd (w admin permissions)(Windows).
+- Connect to your Raspberry Pi using its IP address
+``` 
+ssh pi@<Raspberry_Pi_IP_Address>
+```
+You may be asked a password, bydeafult is 'raspberry'.
+
+Step 2.2 Install Python and its Libraries
+- In the SSH terminal paste these commands
+```
+sudo apt-get install python3 python3-pip
+pip3 install pandas numpy matplotlib yfinance ta ccxt alpaca-trade-api
+```
+------------------------------------------------------------------------------------------
+
+## Step 3 Coding our Trading Bot
+
+Step 3.1 Create a Directory(Folder) for Your Trading Bot
+- In terminal run this command to make a new directory and open it  
+```
+mkdir trading-bot
+cd trading-bot
+```
+
+Step 3.2 Create a Python File for Your Bot
+- In termianl run
+```
+nano bot.py # replace 'bot' with any name you want, Nano is not a name, Nano is a text editor.
+```
+
+- Paste the following code in your file
+```
+import yfinance as yf
+import pandas as pd
+import numpy as np
+import logging
+
+# Fetch historical data
+data = yf.download("AAPL", start="2022-01-01", end="2022-12-31")
+
+# Define the trading strategy
+def moving_average_strategy(data):
+    data['SMA_50'] = data['Close'].rolling(window=50).mean()
+    data['SMA_200'] = data['Close'].rolling(window=200).mean()
+    data['Signal'] = 0
+    data['Signal'][50:] = np.where(data['SMA_50'][50:] > data['SMA_200'][50:], 1, 0)
+    data['Position'] = data['Signal'].diff()
+    return data
+
+data = moving_average_strategy(data)
+
+# Backtest the strategy
+def backtest(data, initial_balance=10000):
+    balance = initial_balance
+    position = 0
+    for i in range(len(data)):
+        if data['Position'][i] == 1:
+            position = balance / data['Close'][i]
+            balance = 0
+        elif data['Position'][i] == -1:
+            balance = position * data['Close'][i]
+            position = 0
+    return balance
+
+final_balance = backtest(data)
+print(f"Final Balance: ${final_balance:.2f}")
+
+# Set up logging
+logging.basicConfig(filename='/home/pi/trading-bot/trading_bot.log', level=logging.INFO)
+
+def log_trade(action, price):
+    logging.info(f"{action} at {price}")
+
+# Example usage
+log_trade('BUY', 150.23)
+```
+- Remember to press enter to save this file.
+- You may exit Nano editor now.
+
+------------------------------------------------------------------------------------------  
+  
+## Step 4 Automating and Running our Bot 24/7
+
+Step 4.1 Create a Shell Script to Start Your Bot (in terminal run)
+```
+nano start_bot.sh
+```
+- Copy and paste the following content into start_bot.sh
+```
+#!/bin/bash
+cd /home/pi/trading-bot
+python3 bot.py
+```
+- save and exit.
+- Now run this command to make our script executable
 
 ```
-Importing libraries Should look like this-
-![Importing libraries Should look like this](https://github.com/user-attachments/assets/16f95f1d-eee2-4675-af79-9fdd56fb5a41)
+chmod +x start_bot.sh
+```
+
+Step 4.2 Set Up a Cron Job to Run our Bot at Boot
+- In the SSH terminal, run
+```
+crontab -e
+```
+- Add the following line at the end of the file to run the script at reboot
+```
+@reboot /home/pi/trading-bot/start_bot.sh
+```
+- save and exit
+
+Step 4.3 Reboot Your Raspberry Pi
+- In the SSH terminal, run
+```
+sudo reboot
+```
+------------------------------------------------------------------------------------------  
+
+## Step 4 Monitor the bot's activity
+- After rebooting, SSH back into your Raspberry Pi
+- Check the logs to ensure your bot is running
+```
+tail -f /home/pi/trading-bot/trading_bot.log (Edit the command!! Make sure to add file name of your bot)
+
+```
+-------------------------We are done-------------------------------------------------------
 
