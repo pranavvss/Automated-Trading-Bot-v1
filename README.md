@@ -45,7 +45,7 @@ APIs: Yahoo Finance (yfinance) for stock data, CCXT for cryptocurrency data or `
 6. Implemented logging to record all trading actions and decisions. Set up log monitoring to track the bot’s performance and actions in real-time.
 
 ------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------
+# SETUP BELOW
 ------------------------------------------------------------------------------------------
 
 ## Step 1 (Get the Hardware Ready)
