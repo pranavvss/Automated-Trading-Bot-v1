@@ -3,10 +3,8 @@ import pandas as pd
 import numpy as np
 import logging
 
-# Fetch historical data
 data = yf.download("AAPL", start="2022-01-01", end="2022-12-31")
 
-# Define the trading strategy
 def moving_average_strategy(data):
     data['SMA_50'] = data['Close'].rolling(window=50).mean()
     data['SMA_200'] = data['Close'].rolling(window=200).mean()
@@ -17,7 +15,6 @@ def moving_average_strategy(data):
 
 data = moving_average_strategy(data)
 
-# Backtest the strategy
 def backtest(data, initial_balance=10000):
     balance = initial_balance
     position = 0
@@ -33,11 +30,9 @@ def backtest(data, initial_balance=10000):
 final_balance = backtest(data)
 print(f"Final Balance: ${final_balance:.2f}")
 
-# Set up logging
 logging.basicConfig(filename='/home/pi/trading-bot/trading_bot.log', level=logging.INFO)
 
 def log_trade(action, price):
     logging.info(f"{action} at {price}")
 
-# Example usage
 log_trade('BUY', 150.23)
