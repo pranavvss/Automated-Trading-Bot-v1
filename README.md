@@ -209,7 +209,10 @@ tail -f /home/pi/trading-bot/trading_bot.log (Edit the command!! Make sure to ad
 
 ```
 ---We are done-------------------------------------------------------------------------
----Please trade on paper tarding(Fake Money)--------------------------------------------
----Use real Money to trade with this bot on your own risk.-------------------------------
----This is posted only for education purpose and should be used for that only.-------------
+
+---Please trade on paper tarding(Fake Money)-------------------------------------------
+
+---Use real Money to trade with this bot on your own risk.-----------------------------
+
+---This is posted only for education purpose and should be used for that only.---------
 
