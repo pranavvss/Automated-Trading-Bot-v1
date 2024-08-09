@@ -14,6 +14,8 @@ Python Libraries: Pandas, NumPy, Matplotlib, yfinance, ta, ccxt, alpaca-trade-ap
 Hardware: Raspberry Pi 4, Mini sd card 16gb + (suggested), USB 2.0 card reader.
 
 [Picture of Raspberry Pi 4](https://assets.raspberrypi.com/static/raspberry-pi-4-labelled-f5e5dcdf6a34223235f83261fa42d1e8.png)
+[Picture of USB 2.0 card reader](https://www.kalitut.com/wp-content/uploads/2020/05/raspberry-pi-cardreader-1.jpg)
+[Picture of Mini sd card](https://robu.in/wp-content/uploads/2019/08/sandisk-32-gb-card.jpg)
 
 Software: Raspbian OS, SSH, cron jobs. 
 
