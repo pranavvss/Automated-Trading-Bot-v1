@@ -42,8 +42,15 @@ APIs: Yahoo Finance (yfinance) for stock data, CCXT for cryptocurrency data or `
 
 ------------------------------------------------------------------------------------------
 
-# Step by Step Guide (follow this) 
+# Step by Step Guide (follow this) Coding Part
 
-## Step 1
-1. Setting Up Your Development Environment- Ensure [Python](https://www.python.org/downloads/) is installed on your system (You can download python from their website, I recommend version 11). 
-2. Use an Integrated Development Environment (IDE where we will write and execute code) For eg. PyCharm, VSCode, or Jupyter Notebook. (If you are a beginner i suggest go with pycharm, intermediate users can install vscode).
+Step 1. Setting Up Your Development Environment- Ensure [Python](https://www.python.org/downloads/) is installed on your system (You can download python from their website, I recommend version 11). 
+Step 2. Use an Integrated Development Environment (IDE where we will write and execute code) For eg. PyCharm, VSCode, or Jupyter Notebook. (If you are a beginner i suggest go with pycharm, intermediate users can install vscode).
+
+Step 3. Installing Required Libraries (Either use cmd (in windows), terminal (in macos) or terminal window in your IDE.
+```
+pip install pandas numpy matplotlib yfinance ta
+pip install ccxt  # this library is used for crypto currency trading
+pip install alpaca-trade-api  # stock trading with Alpaca API
+
+```
