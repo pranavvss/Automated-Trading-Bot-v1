@@ -1,0 +1,5 @@
+# Step by Step Guide 
+
+## Step 1
+1. Setting Up Your Development Environment- Ensure Python is installed on your system (You can download python from their website, I recommend version 11). 
+2. Use an Integrated Development Environment (IDE where we will write and execute code) For eg. PyCharm, VSCode, or Jupyter Notebook. (If you are a beginner i suggest go with pycharm, intermediate users can install vscode).
