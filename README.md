@@ -54,5 +54,6 @@ pip install ccxt  # this library is used for crypto currency trading
 pip install alpaca-trade-api  # stock trading with Alpaca API
 
 ```
+Importing libraries Should look like this-
 ![Importing libraries Should look like this](https://github.com/user-attachments/assets/16f95f1d-eee2-4675-af79-9fdd56fb5a41)
 
