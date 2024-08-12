@@ -15,7 +15,7 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 
 
 >[!WARNING]
->I highly recommend that you test your bot on paper trading.(Fake Money)
+>I highly recommend that you test your bot on paper trading(Fake Money).
 
 ------------------------------------------------------------------------------------------
 ** Key Features:**
@@ -27,7 +27,7 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 
 ------------------------------------------------------------------------------------------
 > [!IMPORTANT]
->### Tools and Technologies Used:
+>Tools and Technologies Used:
 
 - Programming Language: Python.
 - Python Libraries: Pandas, NumPy, Matplotlib, yfinance, ta, ccxt, alpaca-trade-api.
