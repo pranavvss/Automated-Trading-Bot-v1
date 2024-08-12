@@ -37,22 +37,19 @@ I highly recommend that you test your bot on paper trading.(Fake Money)
 
 - Software: Raspbian OS, SSH, cron jobs. 
 - APIs: Yahoo Finance (yfinance) for stock data, CCXT for cryptocurrency data or (If you want to trade in forex, ill suggest ForexConnect API- Provided by OANDA), Alpaca API for stock trading.
-  [yfinance Documentation](https://pypi.org/project/yfinance/)
-  [CCXT Documentation](https://docs.ccxt.com/#/)
+
+[yfinance Documentation](https://pypi.org/project/yfinance/)
+
+[CCXT Documentation](https://docs.ccxt.com/#/)
 
 ------------------------------------------------------------------------------------------
 ### Detailed Explanation:
 
 1. Setup and Configuration: Installed Raspbian OS on a Raspberry Pi and set up the necessary environment. Enabled SSH for remote access and installed required Python libraries.
-
 2. Data Fetching: Utilized yfinance to download historical stock data. Used ccxt to fetch real-time cryptocurrency data from various exchanges.
-
 3. Strategy Implementation: Implemented a simple moving average crossover strategy. Calculated short-term (50-day) and long-term (200-day) moving averages. Generated buy/sell signals based on the crossover points.
-
 4. Backtesting: Developed a backtesting framework to evaluate the strategy against historical data. Simulated trades and calculated final balance to assess performance. Automation:
-
 5. Created a shell script to start the bot and configured it to run at system boot using cron jobs. Ensured 24/7 operation by hosting the bot on the Raspberry Pi. Logging and Monitoring:
-
 6. Implemented logging to record all trading actions and decisions. Set up log monitoring to track the bot’s performance and actions in real-time.
 
 ------------------------------------------------------------------------------------------
@@ -125,7 +122,7 @@ nano bot.py # replace 'bot' with any name you want, Nano is not a name, Nano is 
 ```
 
 - Paste the following code in your file
-```
+```python
 import yfinance as yf
 import pandas as pd
 import numpy as np
