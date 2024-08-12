@@ -173,9 +173,14 @@ def moving_average_strategy(data):
 
 ```
 Explanation - 
-Simple Moving Averages [(Read Documentation)](https://www.geeksforgeeks.org/how-to-calculate-moving-averages-in-python/) - The code calculates two moving averages from the closing prices—SMA over 50 days and 200 days. 
-Signal: This is a binary indicator (1 or 0). A '1' signal is generated when the 50-day SMA crosses above the 200-day SMA.
-Position: Indicates a change in the signal (buy or sell). If the signal changes from 0 to 1, it suggests buying. If from 1 to 0, it suggests selling.
+- Simple Moving Averages - The code calculates two moving averages from the closing prices—SMA over 50 days and 200 days. 
+
+[(Read Documentation on SMA by geeksforgeeks)](https://www.geeksforgeeks.org/how-to-calculate-moving-averages-in-python/) 
+
+[(Read Documentation on SMA by Gregorycernera Medium)](https://gregorycernera.medium.com/computing-simple-moving-average-sma-with-python-pandas-yfinance-0458bb0b5d3b)
+
+- Signal: This is a binary indicator (1 or 0). A '1' signal is generated when the 50-day SMA crosses above the 200-day SMA.
+- Position: Indicates a change in the signal (buy or sell). If the signal changes from 0 to 1, it suggests buying. If from 1 to 0, it suggests selling.
 
 ------------------------------------------------------------------------------------------  
 
