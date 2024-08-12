@@ -1,8 +1,15 @@
-# Algorithmic-Automated-Trading-Bot-on-Raspberry-Pi (This is not for beginners) (Must read this whole Document)
+# Automated Trading Bot on Raspberry Pi 
+
+(This is not for beginners) (Must read this whole Document)
 Developed and deployed an algorithmic trading bot that runs 24/7 on a Raspberry Pi. The bot implements a simple moving average crossover strategy to trade stocks and cryptocurrencies. The project involved data fetching, strategy implementation, backtesting, and automation. Once you are able to understand this you can expand on this by adding more advanced strategies, risk management techniques, and real-time data analysis.
 
+About Raspberry pie - Unlike any Arduino models, you dont have to connect raspberry pie to a computer/laptop, because technically raspberry pie is a computer in itself. It has multiple pins You can connect your mouse, keyboard and monitor to the raspberry pi directly, it uses a quad kit micro processor, it has upto 8 gb of ram, built in wifi and bluetooth, 4 usb ports, Micro SD card and much more. We can also run our trading bot on a cloud server, where you buy a cloud service and upload and run your code on a cloud server for 24/7, Cloud servers one hand are costly becuase you'll have to purchase them every month while Raspberry pie could be a one time investment. Think of it as a very small computer that can easily run our python program 24/7.
+
+![raspberry-pi-4-labelled-f5e5dcdf6a34223235f83261fa42d1e8](https://github.com/user-attachments/assets/8883085d-8a9e-4550-b74f-be2318cd04cd)
+
+
 ## Note
-I highly recommend that you test your bot on paper trading.
+I highly recommend that you test your bot on paper trading.(Fake Money)
 ## Note
 
 ------------------------------------------------------------------------------------------
