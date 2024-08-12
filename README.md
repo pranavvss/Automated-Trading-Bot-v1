@@ -15,6 +15,8 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 
 ![raspberry-pi-4-labelled-f5e5dcdf6a34223235f83261fa42d1e8](https://github.com/user-attachments/assets/8883085d-8a9e-4550-b74f-be2318cd04cd)
 
+<img src="https://github.com/user-attachments/assets/abb0afd1-895b-4efc-a4a2-e44b0b0cef52" />
+
 ------------------------------------------------------------------------------------------
 
 >[!WARNING]
@@ -56,11 +58,15 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 
    [Quick tutorial on Raspbian Setup](https://www.youtube.com/watch?v=CQtliTJ41ZE)
    
-2. Data Fetching: Utilized yfinance to download historical stock data. Used ccxt to fetch real-time cryptocurrency data from various exchanges.
-3. Strategy Implementation: Implemented a simple moving average crossover strategy. Calculated short-term (50-day) and long-term (200-day) moving averages. Generated buy/sell signals based on the crossover points.
-4. Backtesting: Developed a backtesting framework to evaluate the strategy against historical data. Simulated trades and calculated final balance to assess performance. Automation:
-5. Created a shell script to start the bot and configured it to run at system boot using cron jobs. Ensured 24/7 operation by hosting the bot on the Raspberry Pi. Logging and Monitoring:
-6. Implemented logging to record all trading actions and decisions. Set up log monitoring to track the bot’s performance and actions in real-time.
+   [Detailed Documentation on Raspbian Setup by Raspberry pie](https://www.raspberrypi.com/documentation/computers/getting-started.html)
+
+   <img src="https://github.com/user-attachments/assets/2def3fe8-2c89-4403-9a62-8e4428283a1a" width="200" />
+   
+3. Data Fetching: Utilized yfinance to download historical stock data. Used ccxt to fetch real-time cryptocurrency data from various exchanges.
+4. Strategy Implementation: Implemented a simple moving average crossover strategy. Calculated short-term (50-day) and long-term (200-day) moving averages. Generated buy/sell signals based on the crossover points.
+5. Backtesting: Developed a backtesting framework to evaluate the strategy against historical data. Simulated trades and calculated final balance to assess performance. Automation:
+6. Created a shell script to start the bot and configured it to run at system boot using cron jobs. Ensured 24/7 operation by hosting the bot on the Raspberry Pi. Logging and Monitoring:
+7. Implemented logging to record all trading actions and decisions. Set up log monitoring to track the bot’s performance and actions in real-time.
 
 ------------------------------------------------------------------------------------------
 **SETUP BELOW**
