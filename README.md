@@ -13,12 +13,17 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 
 ## Note
 I highly recommend that you test your bot on paper trading.(Fake Money)
-## Note
 
 ------------------------------------------------------------------------------------------
 ### Key Features:
 
-Automated Trading: The bot can execute trades based on predefined strategies without manual intervention. Backtesting: Historical data is used to test and optimize the trading strategy. Real-time Data: Integration with APIs to fetch real-time market data. 24/7 Operation: Hosted on a Raspberry Pi to ensure continuous operation.
+Automated Trading: The bot can execute trades based on predefined strategies without manual intervention. 
+
+Backtesting: Historical data is used to test and optimize the trading strategy. 
+
+Real-time Data: Integration with APIs to fetch real-time market data. 
+
+24/7 Operation: Hosted on a Raspberry Pi to ensure continuous operation.
 
 ------------------------------------------------------------------------------------------
 ### Tools and Technologies Used:
