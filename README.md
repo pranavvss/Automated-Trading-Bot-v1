@@ -42,7 +42,7 @@ Hardware: Raspberry Pi 4, Mini sd card 16gb + (suggested), USB 2.0 card reader.
 
 Software: Raspbian OS, SSH, cron jobs. 
 
-APIs: Yahoo Finance (yfinance) for stock data, CCXT for cryptocurrency data or ```-(If you want to trade in forex, ill suggest ForexConnect API- Provided by OANDA)```, Alpaca API for stock trading
+APIs: Yahoo Finance (yfinance) for stock data, CCXT for cryptocurrency data or (If you want to trade in forex, ill suggest ForexConnect API- Provided by OANDA), Alpaca API for stock trading.
 
 ------------------------------------------------------------------------------------------
 ### Detailed Explanation:
