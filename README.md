@@ -21,7 +21,7 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 >I highly recommend that you test your bot on paper trading(Fake Money).
 
 ------------------------------------------------------------------------------------------
-** Key Features:**
+**Key Features:**
 
 - Automated Trading: The bot can execute trades based on predefined strategies without manual intervention. 
 - Backtesting: Historical data is used to test and optimize the trading strategy. 
