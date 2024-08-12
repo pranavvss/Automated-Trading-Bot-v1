@@ -53,18 +53,20 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 **Detailed Explanation:**
 
 1. Setup and Configuration: Installed Raspbian OS on a Raspberry Pi and set up the necessary environment. Enabled SSH for remote access and installed required Python libraries.
-   [Quick tutorial](https://www.youtube.com/watch?v=CQtliTJ41ZE)
+
+   [Quick tutorial on Raspbian Setup](https://www.youtube.com/watch?v=CQtliTJ41ZE)
+   
 2. Data Fetching: Utilized yfinance to download historical stock data. Used ccxt to fetch real-time cryptocurrency data from various exchanges.
-4. Strategy Implementation: Implemented a simple moving average crossover strategy. Calculated short-term (50-day) and long-term (200-day) moving averages. Generated buy/sell signals based on the crossover points.
-5. Backtesting: Developed a backtesting framework to evaluate the strategy against historical data. Simulated trades and calculated final balance to assess performance. Automation:
-6. Created a shell script to start the bot and configured it to run at system boot using cron jobs. Ensured 24/7 operation by hosting the bot on the Raspberry Pi. Logging and Monitoring:
-7. Implemented logging to record all trading actions and decisions. Set up log monitoring to track the bot’s performance and actions in real-time.
+3. Strategy Implementation: Implemented a simple moving average crossover strategy. Calculated short-term (50-day) and long-term (200-day) moving averages. Generated buy/sell signals based on the crossover points.
+4. Backtesting: Developed a backtesting framework to evaluate the strategy against historical data. Simulated trades and calculated final balance to assess performance. Automation:
+5. Created a shell script to start the bot and configured it to run at system boot using cron jobs. Ensured 24/7 operation by hosting the bot on the Raspberry Pi. Logging and Monitoring:
+6. Implemented logging to record all trading actions and decisions. Set up log monitoring to track the bot’s performance and actions in real-time.
 
 ------------------------------------------------------------------------------------------
 **SETUP BELOW**
 ------------------------------------------------------------------------------------------
 
-**## Step 1 (Get the Hardware Ready)**
+**Step 1 (Get the Hardware Ready)**
 
 Step 1.1 Setting up Raspberry Pi (Get the Hardware Ready)
 - Raspberry Pi (preferably model 4)
@@ -75,6 +77,9 @@ Step 1.1 Setting up Raspberry Pi (Get the Hardware Ready)
 
 Step 1.2. Install Raspbian OS
 - Download the Raspbian OS image from the [official Raspberry Pi website](https://www.raspberrypi.com/software/operating-systems/)
+  
+  [Detailed Tutorial on Raspbian Setup](https://www.youtube.com/watch?v=wvxCNQ5AYPg)
+  
 - Use a tool like [Etcher](https://etcher.download/) to write the image to your microSD card.
 - Insert the microSD card into the Raspberry Pi and connect the power supply, monitor, keyboard, and mouse.
 - Follow the on-screen instructions to complete the setup.
