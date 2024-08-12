@@ -11,7 +11,7 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 ![raspberry-pi-4-labelled-f5e5dcdf6a34223235f83261fa42d1e8](https://github.com/user-attachments/assets/8883085d-8a9e-4550-b74f-be2318cd04cd)
 
 
-## Note
+[!WARNING]
 I highly recommend that you test your bot on paper trading.(Fake Money)
 
 ------------------------------------------------------------------------------------------
@@ -23,6 +23,7 @@ I highly recommend that you test your bot on paper trading.(Fake Money)
 - 24/7 Operation: Hosted on a Raspberry Pi to ensure continuous operation.
 
 ------------------------------------------------------------------------------------------
+ [!IMPORTANT]
 **### Tools and Technologies Used:**
 
 - Programming Language: Python.
@@ -252,11 +253,9 @@ tail -f /home/pi/trading-bot/trading_bot.log (Edit the command!! Make sure to ad
 
 ```
 
----We are done-------------------------------------------------------------------------
+[!NOTE]
+We are done. Make sure you trade on paper tarding(Fake Money). Use real Money to trade with this bot on your own risk. This is posted only for education purpose and should be used for that only.
 
----Please trade on paper tarding(Fake Money)-------------------------------------------
-
----Use real Money to trade with this bot on your own risk.-----------------------------
-
----This is posted only for education purpose and should be used for that only.---------
+[!NOTE]
+If you like more content like this, Read my [Automated-Trading-Bot-No-hardware-required](https://github.com/pranavvss/Automated-Trading-Bot-No-hardware-required) to learn how to make a automated trading bot using python language and deploying our code on a cloud server and trade on it 24/7. (If you follow this method you won't have to buy any raspberry pi or any other hardware for deploying your code, we will only use a laptop and a 1 year free AWS subscription(if you have'nt yet made a account on AWS).
 
