@@ -276,6 +276,8 @@ sudo reboot
 tail -f /home/pi/trading-bot/trading_bot.log (Edit the command!! Make sure to add file name of your bot)
 
 ```
+------------------------------------------------------------------------------------------  
+
 
 >[!NOTE]
 >We are done. Make sure you trade on paper tarding(Fake Money). Use real Money to trade with this bot on your own risk. This is posted only for education purpose and should be used for that only.
