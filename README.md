@@ -1,10 +1,10 @@
 # Automated Trading Bot on Raspberry Pi 
 
-(For intermediate Python programmers) (Must read this whole Document)
+**(For intermediate Python programmers) (Must read this whole Document)**
 
 I Developed and deployed an algorithmic trading bot that runs 24/7 on a Raspberry Pi. The bot implements a simple moving average crossover strategy to trade stocks and cryptocurrencies. The project involved data fetching, strategy implementation, backtesting, and automation. Once you are able to understand this you can expand on this by adding more advanced strategies, risk management techniques, and real-time data analysis.
 
-About Raspberry pie -
+**About Raspberry pie -**
 
 Unlike any Arduino models, you dont have to connect raspberry pie to a computer/laptop, because technically raspberry pie is a computer in itself. It has multiple pins You can connect your mouse, keyboard and monitor to the raspberry pi directly, it uses a quad kit micro processor, it has upto 8 gb of ram, built in wifi and bluetooth, 4 usb ports, Micro SD card and much more. We can also run our trading bot on a cloud server, where you buy a cloud service and upload and run your code on a cloud server for 24/7, Cloud servers one hand are costly becuase you'll have to purchase them every month while Raspberry pie could be a one time investment. Think of it as a very small computer that can easily run our python program 24/7.
 
@@ -15,7 +15,7 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 I highly recommend that you test your bot on paper trading.(Fake Money)
 
 ------------------------------------------------------------------------------------------
-### Key Features:
+**### Key Features:**
 
 - Automated Trading: The bot can execute trades based on predefined strategies without manual intervention. 
 - Backtesting: Historical data is used to test and optimize the trading strategy. 
@@ -23,7 +23,7 @@ I highly recommend that you test your bot on paper trading.(Fake Money)
 - 24/7 Operation: Hosted on a Raspberry Pi to ensure continuous operation.
 
 ------------------------------------------------------------------------------------------
-### Tools and Technologies Used:
+**### Tools and Technologies Used:**
 
 - Programming Language: Python.
 - Python Libraries: Pandas, NumPy, Matplotlib, yfinance, ta, ccxt, alpaca-trade-api.
@@ -43,7 +43,7 @@ I highly recommend that you test your bot on paper trading.(Fake Money)
 [CCXT Documentation](https://docs.ccxt.com/#/)
 
 ------------------------------------------------------------------------------------------
-### Detailed Explanation:
+**### Detailed Explanation:**
 
 1. Setup and Configuration: Installed Raspbian OS on a Raspberry Pi and set up the necessary environment. Enabled SSH for remote access and installed required Python libraries.
 2. Data Fetching: Utilized yfinance to download historical stock data. Used ccxt to fetch real-time cryptocurrency data from various exchanges.
@@ -53,10 +53,10 @@ I highly recommend that you test your bot on paper trading.(Fake Money)
 6. Implemented logging to record all trading actions and decisions. Set up log monitoring to track the bot’s performance and actions in real-time.
 
 ------------------------------------------------------------------------------------------
-# SETUP BELOW
+**# SETUP BELOW**
 ------------------------------------------------------------------------------------------
 
-## Step 1 (Get the Hardware Ready)
+**## Step 1 (Get the Hardware Ready)**
 
 Step 1.1 Setting up Raspberry Pi (Get the Hardware Ready)
 - Raspberry Pi (preferably model 4)
@@ -88,7 +88,7 @@ ifconfig
 ```
 ------------------------------------------------------------------------------------------
 
-## Step 2 (Setting Up Your Development Environment)
+**## Step 2 (Setting Up Your Development Environment)**
 
 Step 2.1 SSH into Your Raspberry Pi from Your Main Computer
 - Open a terminal (Mac/Linux) or cmd (w admin permissions)(Windows).
@@ -106,7 +106,7 @@ pip3 install pandas numpy matplotlib yfinance ta ccxt alpaca-trade-api
 ```
 ------------------------------------------------------------------------------------------
 
-## Step 3 Coding our Trading Bot
+**## Step 3 Coding our Trading Bot**
 
 Step 3.1 Create a Directory(Folder) for Your Trading Bot
 - In terminal run this command to make a new directory and open it  
@@ -207,7 +207,7 @@ Explanation - Configures the logging system to write informational messages into
 
 ------------------------------------------------------------------------------------------ 
 
-## Step 4 Automating and Running our Bot 24/7
+**## Step 4 Automating and Running our Bot 24/7**
 
 Step 4.1 Create a Shell Script to Start Your Bot (in terminal run)
 ```
@@ -244,13 +244,14 @@ sudo reboot
 ```
 ------------------------------------------------------------------------------------------  
 
-## Step 4 Monitor the bot's activity
+## Step 5 Monitor the bot's activity
 - After rebooting, SSH back into your Raspberry Pi
 - Check the logs to ensure your bot is running
 ```
 tail -f /home/pi/trading-bot/trading_bot.log (Edit the command!! Make sure to add file name of your bot)
 
 ```
+
 ---We are done-------------------------------------------------------------------------
 
 ---Please trade on paper tarding(Fake Money)-------------------------------------------
