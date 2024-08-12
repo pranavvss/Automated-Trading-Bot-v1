@@ -1,7 +1,7 @@
 # Automated Trading Bot on Raspberry Pi 
 
-[!NOTE]
-**(For intermediate Python programmers) (Must read this whole Document)**
+>[!NOTE]
+>(For intermediate Python programmers) (Must read this whole Document)
 
 I Developed and deployed an algorithmic trading bot that runs 24/7 on a Raspberry Pi. The bot implements a simple moving average crossover strategy to trade stocks and cryptocurrencies. The project involved data fetching, strategy implementation, backtesting, and automation. Once you are able to understand this you can expand on this by adding more advanced strategies, risk management techniques, and real-time data analysis.
 
@@ -12,8 +12,8 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 ![raspberry-pi-4-labelled-f5e5dcdf6a34223235f83261fa42d1e8](https://github.com/user-attachments/assets/8883085d-8a9e-4550-b74f-be2318cd04cd)
 
 
-[!WARNING]
-I highly recommend that you test your bot on paper trading.(Fake Money)
+>[!WARNING]
+>I highly recommend that you test your bot on paper trading.(Fake Money)
 
 ------------------------------------------------------------------------------------------
 **### Key Features:**
@@ -24,8 +24,8 @@ I highly recommend that you test your bot on paper trading.(Fake Money)
 - 24/7 Operation: Hosted on a Raspberry Pi to ensure continuous operation.
 
 ------------------------------------------------------------------------------------------
- [!IMPORTANT]
-**### Tools and Technologies Used:**
+> [!IMPORTANT]
+>### Tools and Technologies Used:
 
 - Programming Language: Python.
 - Python Libraries: Pandas, NumPy, Matplotlib, yfinance, ta, ccxt, alpaca-trade-api.
@@ -45,7 +45,7 @@ I highly recommend that you test your bot on paper trading.(Fake Money)
 [CCXT Documentation](https://docs.ccxt.com/#/)
 
 ------------------------------------------------------------------------------------------
-**### Detailed Explanation:**
+**Detailed Explanation:**
 
 1. Setup and Configuration: Installed Raspbian OS on a Raspberry Pi and set up the necessary environment. Enabled SSH for remote access and installed required Python libraries.
 2. Data Fetching: Utilized yfinance to download historical stock data. Used ccxt to fetch real-time cryptocurrency data from various exchanges.
@@ -55,7 +55,7 @@ I highly recommend that you test your bot on paper trading.(Fake Money)
 6. Implemented logging to record all trading actions and decisions. Set up log monitoring to track the bot’s performance and actions in real-time.
 
 ------------------------------------------------------------------------------------------
-**# SETUP BELOW**
+**SETUP BELOW**
 ------------------------------------------------------------------------------------------
 
 **## Step 1 (Get the Hardware Ready)**
@@ -108,7 +108,7 @@ pip3 install pandas numpy matplotlib yfinance ta ccxt alpaca-trade-api
 ```
 ------------------------------------------------------------------------------------------
 
-**## Step 3 Coding our Trading Bot**
+**Step 3 Coding our Trading Bot**
 
 Step 3.1 Create a Directory(Folder) for Your Trading Bot
 - In terminal run this command to make a new directory and open it  
@@ -209,7 +209,7 @@ Explanation - Configures the logging system to write informational messages into
 
 ------------------------------------------------------------------------------------------ 
 
-**## Step 4 Automating and Running our Bot 24/7**
+**Step 4 Automating and Running our Bot 24/7**
 
 Step 4.1 Create a Shell Script to Start Your Bot (in terminal run)
 ```
@@ -254,9 +254,9 @@ tail -f /home/pi/trading-bot/trading_bot.log (Edit the command!! Make sure to ad
 
 ```
 
-[!NOTE]
-We are done. Make sure you trade on paper tarding(Fake Money). Use real Money to trade with this bot on your own risk. This is posted only for education purpose and should be used for that only.
+>[!NOTE]
+>We are done. Make sure you trade on paper tarding(Fake Money). Use real Money to trade with this bot on your own risk. This is posted only for education purpose and should be used for that only.
 
-[!NOTE]
-If you like more content like this, Read my [Automated-Trading-Bot-No-hardware-required](https://github.com/pranavvss/Automated-Trading-Bot-No-hardware-required) to learn how to make a automated trading bot using python language and deploying our code on a cloud server and trade on it 24/7. (If you follow this method you won't have to buy any raspberry pi or any other hardware for deploying your code, we will only use a laptop and a 1 year free AWS subscription(if you have'nt yet made a account on AWS).
+>[!NOTE]
+>If you like more content like this, Read my [Automated-Trading-Bot-No-hardware-required](https://github.com/pranavvss/Automated-Trading-Bot-No-hardware-required) to learn how to make a automated trading bot using python language and deploying our code on a cloud server and trade on it 24/7. (If you follow this method you won't have to buy any raspberry pi or any other hardware for deploying your code, we will only use a laptop and a 1 year free AWS subscription(if you have'nt yet made a account on AWS).
 
