@@ -1,8 +1,8 @@
 # Automated Trading Bot on Raspberry Pi 
 
 >[!NOTE]
->(For intermediate Python programmers) (Must read this whole Document)
->
+>For intermediate Python programmers
+>Must read this whole Document
 ------------------------------------------------------------------------------------------
 
 >ABOUT THIS PROJECT -
