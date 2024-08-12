@@ -2,6 +2,7 @@
 
 >[!NOTE]
 >For intermediate Python programmers
+
 >Must read this whole Document
 ------------------------------------------------------------------------------------------
 
