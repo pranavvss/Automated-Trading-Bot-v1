@@ -17,22 +17,17 @@ I highly recommend that you test your bot on paper trading.(Fake Money)
 ------------------------------------------------------------------------------------------
 ### Key Features:
 
-Automated Trading: The bot can execute trades based on predefined strategies without manual intervention. 
-
-Backtesting: Historical data is used to test and optimize the trading strategy. 
-
-Real-time Data: Integration with APIs to fetch real-time market data. 
-
-24/7 Operation: Hosted on a Raspberry Pi to ensure continuous operation.
+- Automated Trading: The bot can execute trades based on predefined strategies without manual intervention. 
+- Backtesting: Historical data is used to test and optimize the trading strategy. 
+- Real-time Data: Integration with APIs to fetch real-time market data. 
+- 24/7 Operation: Hosted on a Raspberry Pi to ensure continuous operation.
 
 ------------------------------------------------------------------------------------------
 ### Tools and Technologies Used:
 
-Programming Language: Python.
-
-Python Libraries: Pandas, NumPy, Matplotlib, yfinance, ta, ccxt, alpaca-trade-api.
-
-Hardware: Raspberry Pi 4, Mini sd card 16gb + (suggested), USB 2.0 card reader.
+- Programming Language: Python.
+- Python Libraries: Pandas, NumPy, Matplotlib, yfinance, ta, ccxt, alpaca-trade-api.
+- Hardware: Raspberry Pi 4, Mini sd card 16gb + (suggested), USB 2.0 card reader.
 
 [Picture of Raspberry Pi 4](https://assets.raspberrypi.com/static/raspberry-pi-4-labelled-f5e5dcdf6a34223235f83261fa42d1e8.png)
 
@@ -40,9 +35,10 @@ Hardware: Raspberry Pi 4, Mini sd card 16gb + (suggested), USB 2.0 card reader.
 
 [Picture of Mini sd card](https://robu.in/wp-content/uploads/2019/08/sandisk-32-gb-card.jpg)
 
-Software: Raspbian OS, SSH, cron jobs. 
-
-APIs: Yahoo Finance (yfinance) for stock data, CCXT for cryptocurrency data or (If you want to trade in forex, ill suggest ForexConnect API- Provided by OANDA), Alpaca API for stock trading.
+- Software: Raspbian OS, SSH, cron jobs. 
+- APIs: Yahoo Finance (yfinance) for stock data, CCXT for cryptocurrency data or (If you want to trade in forex, ill suggest ForexConnect API- Provided by OANDA), Alpaca API for stock trading.
+  [yfinance Documentation](https://pypi.org/project/yfinance/)
+  [CCXT Documentation](https://docs.ccxt.com/#/)
 
 ------------------------------------------------------------------------------------------
 ### Detailed Explanation:
