@@ -120,18 +120,36 @@ Step 3.2 Create a Python File for Your Bot
 ```
 nano bot.py # replace 'bot' with any name you want, Nano is not a name, Nano is a text editor.
 ```
+Then
 
-- Paste the following code in your file
+1. Import Libraries
 ```python
 import yfinance as yf
 import pandas as pd
 import numpy as np
 import logging
 
-# Fetch historical data
-data = yf.download("AAPL", start="2022-01-01", end="2022-12-31")
+```
+Explanation - 
+yfinance: A Python library to download historical market data from Yahoo Finance. 
+pandas: Used for data manipulation and analysis.
+numpy: A library for numerical operations. It is used here to perform element-wise conditions.
+logging: Used to log messages (like trades made during the whole day) to a file for future tracking.
 
-# Define the trading strategy
+------------------------------------------------------------------------------------------ 
+
+2. Fetch Historical Data
+```python
+data = yf.download("AAPL", start="2022-01-01", end="2022-12-31")
+```
+Explanation - This line fetches historical stock price data for Apple Inc. (AAPL) from January 1, 2022, to December 31, 2022.
+
+
+------------------------------------------------------------------------------------------  
+
+3. Defining the Trading Strategy
+
+```python
 def moving_average_strategy(data):
     data['SMA_50'] = data['Close'].rolling(window=50).mean()
     data['SMA_200'] = data['Close'].rolling(window=200).mean()
@@ -140,9 +158,17 @@ def moving_average_strategy(data):
     data['Position'] = data['Signal'].diff()
     return data
 
-data = moving_average_strategy(data)
+```
+Explanation - 
+Simple Moving Averages [(Read Documentation)](https://www.geeksforgeeks.org/how-to-calculate-moving-averages-in-python/) - The code calculates two moving averages from the closing prices—SMA over 50 days and 200 days. 
+Signal: This is a binary indicator (1 or 0). A '1' signal is generated when the 50-day SMA crosses above the 200-day SMA.
+Position: Indicates a change in the signal (buy or sell). If the signal changes from 0 to 1, it suggests buying. If from 1 to 0, it suggests selling.
 
-# Backtest the strategy
+------------------------------------------------------------------------------------------  
+
+4. Backtesting the Strategy
+
+```python
 def backtest(data, initial_balance=10000):
     balance = initial_balance
     position = 0
@@ -154,24 +180,33 @@ def backtest(data, initial_balance=10000):
             balance = position * data['Close'][i]
             position = 0
     return balance
+```
+Explanation - This function simulates trading based on the signals. It starts with an initial balance (e.g., 10,000 INR ). It buys stocks when the signal is to buy (position=1) and sells all when the signal is to sell (position=-1). The final balance after processing all signals is returned.
 
+------------------------------------------------------------------------------------------  
+
+5. Calculate Final Balance
+```python
 final_balance = backtest(data)
 print(f"Final Balance: ${final_balance:.2f}")
-
-# Set up logging
-logging.basicConfig(filename='/home/pi/trading-bot/trading_bot.log', level=logging.INFO)
-
-def log_trade(action, price):
-    logging.info(f"{action} at {price}")
-
-# Example usage
-log_trade('BUY', 150.23)
 ```
+Explanation - Executes the backtest and prints out the final balance after following the trading strategy. (How much did we gain, or loose will be adjusted in our final balance which will be rounded of to two 2 float values (upto 2 decimals)
+
+------------------------------------------------------------------------------------------  
+
+6. Setup Logging
+```python
+logging.basicConfig(filename='/home/pi/trading-bot/trading_bot.log', level=logging.INFO)
+```
+Explanation - Configures the logging system to write informational messages into a file named trading_bot.log.
+
+------------------------------------------------------------------------------------------ 
+
 - Remember to press enter to save this file.
 - You may exit Nano editor now.
 
-------------------------------------------------------------------------------------------  
-  
+------------------------------------------------------------------------------------------ 
+
 ## Step 4 Automating and Running our Bot 24/7
 
 Step 4.1 Create a Shell Script to Start Your Bot (in terminal run)
