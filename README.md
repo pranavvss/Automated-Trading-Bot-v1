@@ -15,7 +15,7 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 
 ![raspberry-pi-4-labelled-f5e5dcdf6a34223235f83261fa42d1e8](https://github.com/user-attachments/assets/8883085d-8a9e-4550-b74f-be2318cd04cd)
 
-<img src="https://github.com/user-attachments/assets/abb0afd1-895b-4efc-a4a2-e44b0b0cef52" />
+<img src="https://github.com/user-attachments/assets/abb0afd1-895b-4efc-a4a2-e44b0b0cef52" width="200"/>
 
 ------------------------------------------------------------------------------------------
 
