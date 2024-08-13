@@ -373,7 +373,7 @@ Detailed explanation- This line of code configures Python's logging module to wr
 
 > Overall Strategy followed-
 
-<img src="https://github.com/user-attachments/assets/bdb3c303-49aa-4cc6-811e-2c55d9c411e4" width="600" />
+<img src="https://github.com/user-attachments/assets/bdb3c303-49aa-4cc6-811e-2c55d9c411e4" width="400" />
 
 
 >[!NOTE]
