@@ -308,15 +308,15 @@ sudo reboot
 - Check the logs to ensure your bot is running
 ```
 tail -f /home/pi/trading-bot/trading_bot.log (Edit the command!! Make sure to add file name of your bot)
-
 ```
-**------------------------------------------------------------------------------------------** 
 
-**-----------------------------2023 UPDATED VERSION BELOW------------------------**
+------------------------------------------------------------------------------------------
 
 
-**------------------------------------------------------------------------------------------**
+#2023 CHANGE LOGS BELOW
 
+
+------------------------------------------------------------------------------------------  
 
 
 
@@ -341,9 +341,12 @@ Usefull Documents I highly suggest you to read
 - Risk Management: Added Stop-loss and take-profit mechanisms to protect and secure gains immediately.
 - Enhanced Logging: Detailed logging includes timestamps, action types, and prices for better traceability.
 
+ ------------------------------------------------------------------------------------------ 
+
 **Implementation
 
 1. Calculate Indicators
+
 ```python
 def calculate_indicators(data):
     # Exponential Moving Averages
@@ -358,11 +361,14 @@ def calculate_indicators(data):
     return data
 ```
 
-Detailed explanation- EMA_12 and EMA_26 - These are exponential moving averages calculated over 12 and 26 days, respectively. EMA reacts more quickly to price changes than SMA due to its focus on recent prices. RSI also known as The Relative Strength Index measures the magnitude of recent price changes to evaluate overbought or oversold conditions in the price of a stock. Here, it's calculated over a 14-day period. Values below 30 indicate oversold conditions (potentially undervalued), and above 70 suggest overbought conditions (potentially overvalued).
+Detailed explanation- 
+
+EMA_12 and EMA_26 - These are exponential moving averages calculated over 12 and 26 days, respectively. EMA reacts more quickly to price changes than SMA due to its focus on recent prices. RSI also known as The Relative Strength Index measures the magnitude of recent price changes to evaluate overbought or oversold conditions in the price of a stock. Here, it's calculated over a 14-day period. Values below 30 indicate oversold conditions (potentially undervalued), and above 70 suggest overbought conditions (potentially overvalued).
 
 ------------------------------------------------------------------------------------------
 
 2. Generate Signals
+   
 ```python
 def generate_signals(data):
     data['Signal'] = 0
@@ -373,11 +379,17 @@ def generate_signals(data):
     data['Position'] = data['Signal'].replace(to_replace=0, method='ffill')
     return data
 ```
-Detailed explanation- Buy and Sell Signals are determined by the crossing of EMAs and the RSI levels, Buy Signal are generated when the short-term EMA (12 days) crosses above the long-term EMA (26 days) and the RSI is below 30. Sell Signal are generated when the short-term EMA falls below the long-term EMA and the RSI exceeds 70. This holds the current position, either holding (1 for buy, -1 for sell) or neutral (0), and carries forward the last non-zero signal until a new signal changes it.
+
+Detailed explanation-
+
+Buy and Sell Signals are determined by the crossing of EMAs and the RSI levels, Buy Signal are generated when the short-term EMA (12 days) crosses above the long-term EMA (26 days) and the RSI is below 30. Sell Signal are generated when the short-term EMA falls below the long-term EMA and the RSI exceeds 70. This holds the current position, either holding (1 for buy, -1 for sell) or neutral (0), and carries forward the last non-zero signal until a new signal changes it.
 
 ------------------------------------------------------------------------------------------
 
+
 3. Backtest with Risk Management
+
+
 ```python
 def backtest(data, initial_balance=10000):
     balance = initial_balance
@@ -392,20 +404,31 @@ def backtest(data, initial_balance=10000):
         ...
     return balance
 ```
-Detailed explanation- Loop Through Data Iterates over each row (each day's trading data) to execute trading decisions based on the previously generated signals. Stop-loss and Take-profit are set as a percentage of the entry price. Stop-loss is at 95% of entry price, If the price drops to this level, the position is sold to limit further losses. Take-profit at 110% of entry price, If the price reaches this level, the position is sold to lock in profits.
+
+Detailed explanation-
+
+Loop Through Data Iterates over each row (each day's trading data) to execute trading decisions based on the previously generated signals. Stop-loss and Take-profit are set as a percentage of the entry price. Stop-loss is at 95% of entry price, If the price drops to this level, the position is sold to limit further losses. Take-profit at 110% of entry price, If the price reaches this level, the position is sold to lock in profits.
 
 Logging: Logs every buy, sell, stop loss, and take profit event with detailed information.
 
 ------------------------------------------------------------------------------------------
 
 4. Logging Configuration
+   
 ```python
 logging.basicConfig(filename='trading_bot.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 ```
-Detailed explanation- This line of code configures Python's logging module to write logs to a file trading_bot.log, including timestamps, logging levels, and messages, providing a detailed record of all trading activities and decisions.
+
+Detailed explanation- 
+
+This line of code configures Python's logging module to write logs to a file trading_bot.log, including timestamps, logging levels, and messages, providing a detailed record of all trading activities and decisions.
 
 ------------------------------------------------------------------------------------------
 
+>[!NOTE]
+>Make sure to download the new (Updated_bot(2023) and paste that code and run it, I have made few changes in it that i have thoroughly discussed above. There is alot of room for improvement still, and as I keep learning new concepts new calculation strategies, Ill definetly make sure to update this Documentation again.
+
+------------------------------------------------------------------------------------------
 > Overall Strategy followed-
 
 <img src="https://github.com/user-attachments/assets/bdb3c303-49aa-4cc6-811e-2c55d9c411e4" width="400" />
