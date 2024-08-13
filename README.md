@@ -40,18 +40,18 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 - Python Libraries: Pandas, NumPy, Matplotlib, yfinance, ta, ccxt, alpaca-trade-api.
 - Hardware: Raspberry Pi 4, Mini sd card 16gb + (suggested), USB 2.0 card reader.
 
-- [Picture of Raspberry Pi 4](https://assets.raspberrypi.com/static/raspberry-pi-4-labelled-f5e5dcdf6a34223235f83261fa42d1e8.png)
+  [Picture of Raspberry Pi 4](https://assets.raspberrypi.com/static/raspberry-pi-4-labelled-f5e5dcdf6a34223235f83261fa42d1e8.png)
 
-- [Picture of USB 2.0 card reader](https://www.kalitut.com/wp-content/uploads/2020/05/raspberry-pi-cardreader-1.jpg)
+  [Picture of USB 2.0 card reader](https://www.kalitut.com/wp-content/uploads/2020/05/raspberry-pi-cardreader-1.jpg)
 
-- [Picture of Mini sd card](https://robu.in/wp-content/uploads/2019/08/sandisk-32-gb-card.jpg)
+  [Picture of Mini sd card](https://robu.in/wp-content/uploads/2019/08/sandisk-32-gb-card.jpg)
 
 - Software: Raspbian OS, SSH, cron jobs. 
 - APIs: Yahoo Finance (yfinance) for stock data, CCXT for cryptocurrency data or (If you want to trade in forex, ill suggest ForexConnect API- Provided by OANDA), Alpaca API for stock trading.
 
-[yfinance Documentation](https://pypi.org/project/yfinance/)
+  [yfinance Documentation](https://pypi.org/project/yfinance/)
 
-[CCXT Documentation](https://docs.ccxt.com/#/)
+  [CCXT Documentation](https://docs.ccxt.com/#/)
 
 ------------------------------------------------------------------------------------------
 
