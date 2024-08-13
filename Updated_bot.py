@@ -2,6 +2,17 @@ import yfinance as yf
 import pandas as pd
 import numpy as np
 import logging
+import alpaca_trade_api as tradeapi
+from datetime import datetime
+
+#If you want to trade on paper trading follow this additional step
+
+API_KEY = 'your_api_key_here'
+SECRET_KEY = 'your_secret_key_here'
+BASE_URL = 'https://paper-api.alpaca.markets'
+
+# Create an instance of the Alpaca API
+api = tradeapi.REST(API_KEY, SECRET_KEY, BASE_URL, api_version='v2')
 
 # Download historical data
 data = yf.download("AAPL", start="2022-01-01", end="2022-12-31")
