@@ -228,6 +228,10 @@ print(f"Final Balance: ${final_balance:.2f}")
 ```
 Explanation - Executes the backtest and prints out the final balance after following the trading strategy. (How much did we gain, or loose will be adjusted in our final balance which will be rounded of to two 2 float values (upto 2 decimals)
 
+>Visual representation of what Output comes when this process executes-
+![image](https://github.com/user-attachments/assets/84fe728f-b4c5-4222-a962-191f421897e9)
+
+
 ------------------------------------------------------------------------------------------  
 
 6. Setup Logging
