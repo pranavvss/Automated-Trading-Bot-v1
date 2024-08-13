@@ -1,5 +1,8 @@
 # Automated Trading Bot on Raspberry Pi 
 
+> [!IMPORTANT]
+> Scroll down to find Full explanation of change logs made.
+
 >[!NOTE]
 >For intermediate Python programmers.
 
@@ -276,9 +279,85 @@ sudo reboot
 tail -f /home/pi/trading-bot/trading_bot.log (Edit the command!! Make sure to add file name of your bot)
 
 ```
-------------------------------------------------------------------------------------------  
+**------------------------------------------------------------------------------------------** 
+**-----------------------------2023 UPDATED VERSION BELOW-----------------------------------**
+**------------------------------------------------------------------------------------------**
 
 
+> [!IMPORTANT]
+> CHANGELOGS - Added some New features in my bot to make it more strategically strong and added more functions in it such as
+
+**Additions (2023 version)**
+- EMA Calculation [(Read Documentation on EMA Calculation)](https://www.geeksforgeeks.org/how-to-calculate-an-exponential-moving-average-in-python/) which is more responsive than SMA, it reacts faster to price changes.
+- RSI Calculation [(Read Documentation on RSI Calculation)](https://stackoverflow.com/questions/73115286/python-while-trying-to-calculate-rsirelative-strength-index-stock-indicator) RSI helps to identify potentially overbought or oversold conditions currently in the market. 
+- Signal Generation: Combines EMA crossover and RSI thresholds for buy/sell signals.
+- Risk Management: Added Stop-loss and take-profit mechanisms to protect and secure gains immediately.
+- Enhanced Logging: Detailed logging includes timestamps, action types, and prices for better traceability.
+
+**Implementation
+
+1. Calculate Indicators
+```python
+def calculate_indicators(data):
+    # Exponential Moving Averages
+    data['EMA_12'] = data['Close'].ewm(span=12, adjust=False).mean()
+    data['EMA_26'] = data['Close'].ewm(span=26, adjust=False).mean()
+    # Relative Strength Index
+    delta = data['Close'].diff()
+    gain = (delta.where(delta > 0, 0)).rolling(window=14).mean()
+    loss = (-delta.where(delta < 0, 0)).rolling(window=14).mean()
+    rs = gain / loss
+    data['RSI'] = 100 - (100 / (1 + rs))
+    return data
+```
+
+Detailed explanation- EMA_12 and EMA_26 - These are exponential moving averages calculated over 12 and 26 days, respectively. EMA reacts more quickly to price changes than SMA due to its focus on recent prices. RSI also known as The Relative Strength Index measures the magnitude of recent price changes to evaluate overbought or oversold conditions in the price of a stock. Here, it's calculated over a 14-day period. Values below 30 indicate oversold conditions (potentially undervalued), and above 70 suggest overbought conditions (potentially overvalued).
+
+------------------------------------------------------------------------------------------
+
+2. Generate Signals
+```python
+def generate_signals(data):
+    data['Signal'] = 0
+    buy_signal = (data['EMA_12'] > data['EMA_26']) & (data['RSI'] < 30)
+    sell_signal = (data['EMA_12'] < data['EMA_26']) & (data['RSI'] > 70)
+    data.loc[buy_signal, 'Signal'] = 1
+    data.loc[sell_signal, 'Signal'] = -1
+    data['Position'] = data['Signal'].replace(to_replace=0, method='ffill')
+    return data
+```
+Detailed explanation- Buy and Sell Signals are determined by the crossing of EMAs and the RSI levels, Buy Signal are generated when the short-term EMA (12 days) crosses above the long-term EMA (26 days) and the RSI is below 30. Sell Signal are generated when the short-term EMA falls below the long-term EMA and the RSI exceeds 70. This holds the current position, either holding (1 for buy, -1 for sell) or neutral (0), and carries forward the last non-zero signal until a new signal changes it.
+
+------------------------------------------------------------------------------------------
+
+3. Backtest with Risk Management
+```python
+def backtest(data, initial_balance=10000):
+    balance = initial_balance
+    position = 0
+    stop_loss = 0.95
+    take_profit = 1.10
+    entry_price = 0
+
+    for i, row in data.iterrows():
+        # Buy or sell logic based on signals
+        # Stop-loss and take-profit execution
+        ...
+    return balance
+```
+Detailed explanation- Loop Through Data Iterates over each row (each day's trading data) to execute trading decisions based on the previously generated signals. Stop-loss and Take-profit are set as a percentage of the entry price. Stop-loss is at 95% of entry price, If the price drops to this level, the position is sold to limit further losses. Take-profit at 110% of entry price, If the price reaches this level, the position is sold to lock in profits.
+
+Logging: Logs every buy, sell, stop loss, and take profit event with detailed information.
+
+------------------------------------------------------------------------------------------
+
+4. Logging Configuration
+```python
+logging.basicConfig(filename='trading_bot.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+```
+Detailed explanation- This line of code configures Python's logging module to write logs to a file trading_bot.log, including timestamps, logging levels, and messages, providing a detailed record of all trading activities and decisions.
+
+------------------------------------------------------------------------------------------
 >[!NOTE]
 >We are done. Make sure you trade on paper tarding(Fake Money). Use real Money to trade with this bot on your own risk. This is posted only for education purpose and should be used for that only.
 
