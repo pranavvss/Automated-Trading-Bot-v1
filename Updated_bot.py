@@ -1,3 +1,5 @@
+#UPDATED 2024 EDITION (ENJOY THE CODE)
+
 import yfinance as yf
 import pandas as pd
 import numpy as np
