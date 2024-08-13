@@ -60,11 +60,15 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 
 1. Setup and Configuration: Installed Raspbian OS on a Raspberry Pi and set up the necessary environment. Enabled SSH for remote access and installed required Python libraries.
 
+This is how Raspberry Pi OS looks like
+
+<img src="https://github.com/user-attachments/assets/c8ad5b09-e04c-48d9-ba49-b0e137a52596" width="600" />
+
 [Quick tutorial on Raspbian Setup](https://www.youtube.com/watch?v=CQtliTJ41ZE)
    
 [Detailed Documentation on Raspbian Setup by Raspberry pie](https://www.raspberrypi.com/documentation/computers/getting-started.html)
 
-   <img src="https://github.com/user-attachments/assets/2def3fe8-2c89-4403-9a62-8e4428283a1a" width="600" />
+<img src="https://github.com/user-attachments/assets/2def3fe8-2c89-4403-9a62-8e4428283a1a" width="600" />
    
 3. Data Fetching: Utilized yfinance to download historical stock data. Used ccxt to fetch real-time cryptocurrency data from various exchanges.
 4. Strategy Implementation: Implemented a simple moving average crossover strategy. Calculated short-term (50-day) and long-term (200-day) moving averages. Generated buy/sell signals based on the crossover points.
