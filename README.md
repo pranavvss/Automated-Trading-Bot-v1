@@ -61,7 +61,7 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 
 - This is how Raspberry Pi OS looks like
 
-- <img src="https://github.com/user-attachments/assets/2def3fe8-2c89-4403-9a62-8e4428283a1a" width="600" />
+<img src="https://github.com/user-attachments/assets/2def3fe8-2c89-4403-9a62-8e4428283a1a" width="600" />
 
 - [Quick tutorial on Raspbian Setup](https://www.youtube.com/watch?v=CQtliTJ41ZE)
    
