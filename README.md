@@ -68,7 +68,6 @@ This is how Raspberry Pi OS looks like
    
 [Detailed Documentation on Raspbian Setup by Raspberry pie](https://www.raspberrypi.com/documentation/computers/getting-started.html)
 
-<img src="https://github.com/user-attachments/assets/c8ad5b09-e04c-48d9-ba49-b0e137a52596" width="450" />
 
 3. Data Fetching: Utilized yfinance to download historical stock data. Used ccxt to fetch real-time cryptocurrency data from various exchanges.
 4. Strategy Implementation: Implemented a simple moving average crossover strategy. Calculated short-term (50-day) and long-term (200-day) moving averages. Generated buy/sell signals based on the crossover points.
