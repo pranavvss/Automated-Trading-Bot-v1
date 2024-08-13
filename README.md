@@ -294,7 +294,9 @@ tail -f /home/pi/trading-bot/trading_bot.log (Edit the command!! Make sure to ad
 
 Usefull Documents I highly suggest you to read
 >[A small yfinance Documentation, Credits: Medium](https://medium.com/@kasperjuunge/yfinance-10-ways-to-get-stock-data-with-python-6677f49e8282)
+
 >[Detailed Documentation on RSI, Crredits: Medium](https://rbdundas.medium.com/calculate-relative-strength-index-rsi-and-chart-with-candles-using-python-pandas-and-matplotlib-f58d926249ac)
+
 >[If you want to recap RSI, while learning more, Credits: EODHD API's](https://eodhd.com/financial-academy/backtesting-strategies-examples/algorithmic-trading-with-relative-strength-index-in-python)
 
 **Additions (2023 version)**
