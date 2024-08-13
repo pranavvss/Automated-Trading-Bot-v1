@@ -13,7 +13,7 @@ I've Developed and deployed an algorithmic trading bot that runs 24/7 on a Raspb
 
 ------------------------------------------------------------------------------------------
 
-**About Raspberry pie -**
+**ABOUT RASPBERRY PIE -**
 
 Unlike any Arduino models, you dont have to connect raspberry pie to a computer/laptop, because technically raspberry pie is a computer in itself. It has multiple pins You can connect your mouse, keyboard and monitor to the raspberry pi directly, it uses a quad kit micro processor, it has upto 8 gb of ram, built in wifi and bluetooth, 4 usb ports, Micro SD card and much more. We can also run our trading bot on a cloud server, where you buy a cloud service and upload and run your code on a cloud server for 24/7, Cloud servers on one hand can be costly becuase you'll have to purchase them every month while Raspberry pie could be a one time investment. Think of it as a very small computer that can easily run our python program 24/7.
 
@@ -25,7 +25,7 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 >I highly recommend that you test your bot on paper trading(Fake Money).
 
 ------------------------------------------------------------------------------------------
-**Key Features:**
+**KEY FEATURES -**
 
 - Automated Trading: The bot can execute trades based on predefined strategies without manual intervention. 
 - Backtesting: Historical data is used to test and optimize the trading strategy. 
@@ -34,7 +34,7 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 
 ------------------------------------------------------------------------------------------
 > [!IMPORTANT]
->Tools and Technologies Used:
+>TOOLS AND TECHNOLGIES USED -:
 
 - Programming Language: Python.
 - Python Libraries: Pandas, NumPy, Matplotlib, yfinance, ta, ccxt, alpaca-trade-api.
@@ -54,7 +54,8 @@ Unlike any Arduino models, you dont have to connect raspberry pie to a computer/
 [CCXT Documentation](https://docs.ccxt.com/#/)
 
 ------------------------------------------------------------------------------------------
-**Detailed Explanation:**
+
+**DETAILED EXPLANATION**
 
 1. Setup and Configuration: Installed Raspbian OS on a Raspberry Pi and set up the necessary environment. Enabled SSH for remote access and installed required Python libraries.
 
