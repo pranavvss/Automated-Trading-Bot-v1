@@ -200,6 +200,12 @@ Explanation -
 - Signal: This is a binary indicator (1 or 0). A '1' signal is generated when the 50-day SMA crosses above the 200-day SMA.
 - Position: Indicates a change in the signal (buy or sell). If the signal changes from 0 to 1, it suggests buying. If from 1 to 0, it suggests selling.
 
+>[!NOTE]
+> You must be connected to [Alpaca trader broker](https://alpaca.markets/) ( For paper trading) Please add you API key and Security key in the code I have provided, Other oders wont be placed and a error will come like this- 
+
+![image](https://github.com/user-attachments/assets/a1599cac-aeee-4872-a556-4dbf573aec54)
+
+
 ------------------------------------------------------------------------------------------  
 
 4. Backtesting the Strategy
