@@ -167,10 +167,9 @@ data = yf.download("AAPL", start="2022-01-01", end="2022-12-31")
 ```
 Explanation - This line fetches historical stock price data for Apple Inc. (AAPL) from January 1, 2022, to December 31, 2022.
 
->[!Note] Just for fun if you want to see how yfinance work and stores data for a given time, refer to the image below.
+>[!Note] Just for fun if you want to see how yfinance work and stores data for a given time, refer to the image below. (Use the given code to fetch data of any stocks,crypto you like)
 
-![image](https://github.com/user-attachments/assets/3a3c1de6-37fb-4f1c-9272-cac72a6bfd10)
-
+![image](https://github.com/user-attachments/assets/f2ae7b59-1bd8-4b37-89ae-25671653910e)
 
 ------------------------------------------------------------------------------------------  
 
