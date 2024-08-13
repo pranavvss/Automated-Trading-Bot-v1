@@ -226,7 +226,10 @@ Explanation - Executes the backtest and prints out the final balance after follo
 ```python
 logging.basicConfig(filename='/home/pi/trading-bot/trading_bot.log', level=logging.INFO)
 ```
-Explanation - Configures the logging system to write informational messages into a file named trading_bot.log.
+Explanation - Configures the logging system to write informational messages into a file named trading_bot.log. (Example of how logs get saved every time the process executes)
+
+![image](https://github.com/user-attachments/assets/59b19826-2c36-4ac4-92c5-355142f81123)
+
 
 ------------------------------------------------------------------------------------------ 
 
