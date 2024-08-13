@@ -1,7 +1,7 @@
 # Automated Trading Bot on Raspberry Pi 
 
 > [!IMPORTANT]
-> Scroll down to find Full explanation of change logs made.
+> Scroll down to find Full explanation of change logs made. (2023)
 
 >[!NOTE]
 >For intermediate Python programmers.
