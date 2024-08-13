@@ -433,8 +433,9 @@ This line of code configures Python's logging module to write logs to a file tra
 
 <img src="https://github.com/user-attachments/assets/bdb3c303-49aa-4cc6-811e-2c55d9c411e4" width="400" />
 
+------------------------------------------------------------------------------------------
 
->[!NOTE]
+>[!CAUTION]
 >We are done. Make sure you trade on paper tarding(Fake Money). Use real Money to trade with this bot on your own risk. This is posted only for education purpose and should be used for that only.
 
 >[!NOTE]
