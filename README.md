@@ -370,6 +370,11 @@ logging.basicConfig(filename='trading_bot.log', level=logging.INFO, format='%(as
 Detailed explanation- This line of code configures Python's logging module to write logs to a file trading_bot.log, including timestamps, logging levels, and messages, providing a detailed record of all trading activities and decisions.
 
 ------------------------------------------------------------------------------------------
+
+> Overall Strategy followed-
+
+![WhatsApp Image 2024-08-13 at 05 59 04_caa42cd3](https://github.com/user-attachments/assets/bdb3c303-49aa-4cc6-811e-2c55d9c411e4)
+
 >[!NOTE]
 >We are done. Make sure you trade on paper tarding(Fake Money). Use real Money to trade with this bot on your own risk. This is posted only for education purpose and should be used for that only.
 
