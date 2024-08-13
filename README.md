@@ -292,6 +292,11 @@ tail -f /home/pi/trading-bot/trading_bot.log (Edit the command!! Make sure to ad
 > [!IMPORTANT]
 > CHANGELOGS - Added some New features in my bot to make it more strategically strong and added more functions in it such as
 
+Usefull Documents I highly suggest you to read
+>[A small yfinance Documentation, Credits: Medium](https://medium.com/@kasperjuunge/yfinance-10-ways-to-get-stock-data-with-python-6677f49e8282)
+>[Detailed Documentation on RSI, Crredits: Medium](https://rbdundas.medium.com/calculate-relative-strength-index-rsi-and-chart-with-candles-using-python-pandas-and-matplotlib-f58d926249ac)
+>[If you want to recap RSI, while learning more, Credits: EODHD API's](https://eodhd.com/financial-academy/backtesting-strategies-examples/algorithmic-trading-with-relative-strength-index-in-python)
+
 **Additions (2023 version)**
 - EMA Calculation [(Read Documentation on EMA Calculation)](https://www.geeksforgeeks.org/how-to-calculate-an-exponential-moving-average-in-python/) which is more responsive than SMA, it reacts faster to price changes.
 - RSI Calculation [(Read Documentation on RSI Calculation)](https://stackoverflow.com/questions/73115286/python-while-trying-to-calculate-rsirelative-strength-index-stock-indicator) RSI helps to identify potentially overbought or oversold conditions currently in the market. 
