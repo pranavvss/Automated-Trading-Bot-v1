@@ -439,5 +439,5 @@ This line of code configures Python's logging module to write logs to a file tra
 >We are done. Make sure you trade on paper tarding(Fake Money). Use real Money to trade with this bot on your own risk. This is posted only for education purpose and should be used for that only.
 
 >[!NOTE]
->If you like more content like this, Read my [Automated-Trading-Bot-No-hardware-required](https://github.com/pranavvss/Automated-Trading-Bot-No-hardware-required) to learn how to make a automated trading bot using python language and deploying our code on a cloud server and trade on it 24/7. (If you follow this method you won't have to buy any raspberry pi or any other hardware for deploying your code, we will only use a laptop and a 1 year free AWS subscription(if you have'nt yet made a account on AWS).
+>If you like more content like this, Read my [Automated Trading Bot-No hardware required, 2023](https://github.com/pranavvss/Automated-Trading-Bot-No-hardware-required) to learn how to make a automated trading bot using python language and deploying our code on a cloud server and trade on it 24/7. (If you follow this method you won't have to buy any raspberry pi or any other hardware for deploying your code, we will only use a laptop and a 1 year free AWS subscription(if you have'nt yet made a account on AWS).
 
