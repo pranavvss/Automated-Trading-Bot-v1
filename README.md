@@ -156,6 +156,12 @@ import pandas as pd
 import numpy as np
 import logging
 
+#Update (Change logs - 2023) If you want (recommeded) to trade of paper trading(fake money) to test out this bot, I recommend using Alpaca Trading brokers, Its easy to setup a paper trading account there.
+#For alpaca you'll need to import following libraries, If you wish to use any another provider make sure to research on how their apis can be implemented in the code
+
+import alpaca_trade_api as tradeapi
+from datetime import datetime
+
 ```
 Explanation - 
 yfinance: A Python library to download historical market data from Yahoo Finance. 
