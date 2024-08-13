@@ -4,10 +4,7 @@
 > Scroll down to find Full explanation of change logs made. (2023,2024)
 
 >[!NOTE]
->For intermediate Python programmers.
-
->[!NOTE]
->Must read this whole Document.
+>For intermediate Python programmers. Users must read this whole Document.
 ------------------------------------------------------------------------------------------
 
 >ABOUT THIS PROJECT -
